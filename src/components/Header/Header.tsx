@@ -99,12 +99,11 @@ const Header: React.FC = () => {
           </motion.button>
 
           <motion.button
-            className="btn-secondary"
+            className={styles.themeToggle}
             aria-label="Toggle theme"
             onClick={toggleTheme}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0.5rem', borderRadius: '0.5rem' }}
           >
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </motion.button>

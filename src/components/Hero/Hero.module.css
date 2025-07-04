@@ -2,10 +2,11 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   padding: 2rem 0;
   margin-top: 48px;
-  background: linear-gradient(135deg, #f8fafc 0%, #e0c3fc 100%);
+  background: var(--bg);
   transition: background 0.5s cubic-bezier(0.4,0,0.2,1);
   overflow: hidden;
 }
@@ -16,10 +17,14 @@
   gap: 4rem;
   align-items: center;
   min-height: 80vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .textContent {
   z-index: 10;
+  text-align: left;
 }
 
 .greeting {
@@ -167,46 +172,51 @@
   align-items: center;
 }
 
+@media (max-width: 1024px) {
+  .content {
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .content {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
+    justify-items: center;
+    padding: 0 1rem;
   }
-
+  .textContent {
+    text-align: center;
+  }
   .name {
     font-size: 2.5rem;
   }
-
   .title {
     font-size: 1.5rem;
   }
-
   .description {
     font-size: 1rem;
   }
-
   .actions {
     flex-direction: column;
     align-items: center;
   }
-
   .imageWrapper {
     width: 280px;
     height: 280px;
   }
-
   .skills {
     justify-content: center;
   }
-
   .socialLinks {
     justify-content: center;
   }
 }
 
 .dark .hero {
-  background: linear-gradient(135deg, #111827 0%, #312e81 100%);
+  background: var(--bg);
 }
 
 .dark .title {

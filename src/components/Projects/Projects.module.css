@@ -1,5 +1,5 @@
 .projects {
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--bg);
 }
 
 .header {
@@ -199,7 +199,7 @@
 }
 
 .dark .projects {
-  background: rgba(17, 24, 39, 0.85);
+  background: var(--bg);
 }
 .dark .title {
   color: #f3f4f6;

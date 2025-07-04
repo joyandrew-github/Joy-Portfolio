@@ -10,7 +10,7 @@ const Projects: React.FC = () => {
       description: 'The Smart Parking and Booking System optimizes parking space utilization with a convenient booking platform, real-time updates, and enhanced user experience.',
       image: 'https://images.pexels.com/photos/753876/pexels-photo-753876.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST API', 'Leaflet', 'RazorPay'],
-      liveLink: 'https://namma-spot.vercel.app/',
+      liveLink: 'https://namma-spot.vercel.app/AdminHome',
       githubLink: 'https://github.com/joyandrew-github',
       date: 'June 2024',
       featured: true,

@@ -28,8 +28,8 @@ html {
 }
 
 body {
-  background: #111827;
-  color: #f3f4f6;
+  background: var(--bg);
+  color: var(--text);
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
@@ -189,7 +189,14 @@ a:hover {
   }
 }
 
-.dark body {
-  background: #111827;
-  color: #f3f4f6;
+.dark:root {
+  --primary: #f3f4f6;
+  --primary-light: #cbd5e1;
+  --accent: #a78bfa;
+  --accent-light: #6366f1;
+  --text: #f3f4f6;
+  --text-light: #a1a1aa;
+  --bg: #111827;
+  --bg-card: #1e293b;
+  --border: #374151;
 }
