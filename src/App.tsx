@@ -13,7 +13,7 @@ import './styles/global.css';
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-slate-50 text-slate-900 overflow-x-hidden">
+    <div className="relative min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 overflow-x-hidden">
       <Background3D />
       
       <div className="relative z-10">

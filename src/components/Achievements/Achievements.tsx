@@ -2,9 +2,19 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Trophy, Award, Star, Target } from 'lucide-react';
 import styles from './Achievements.module.css';
+import leetcodeLogo from '../../assets/leetcode.jpeg';
+import skillrackLogo from '../../assets/skillrack.jpg';
 
 const Achievements: React.FC = () => {
   const achievements = [
+    {
+      title: 'Winner - Buildathon- Expo',
+      organization: 'Sri Eshwar College of Engineering',
+      description: 'Achieved 1st place among 20+ teams in the department at the C Buildathon held at Sri Eshwar College of Engineering.',
+      date: 'Oct 2023',
+      icon: Award,
+      type: 'competition',
+    },
     {
       title: 'Winner - Shophify (eCommerce Website)',
       organization: 'Sri Eshwar College of Engineering',
@@ -16,7 +26,7 @@ const Achievements: React.FC = () => {
     {
       title: 'Winner - Project Expo',
       organization: 'Sri Ramakrishna Institute of Technology',
-      description: 'Secured 1st place at the Project Expo held at Sri Ramakrishna Institute of Technology for EduViz - Interactive 3D Learning Platform, winning a cash prize of ₹20,000.',
+      description: 'Secured 1st place at the Project Expo held at Sri Ramakrishna Institute of Technology for EduViz - Interactive 3D Learning Platform, winning a cash prize of ₹2,000.',
       date: 'April 2025',
       icon: Award,
       type: 'competition',
@@ -52,7 +62,7 @@ const Achievements: React.FC = () => {
   const problemSolving = [
     {
       platform: 'LeetCode',
-      achievement: 'Solved 150+ problems, Contest Rating: 1,608',
+      achievement: 'Solved 200+ problems, Contest Rating: 1,608',
       link: 'https://leetcode.com/u/user5788Ci/',
     },
     {
@@ -110,6 +120,12 @@ const Achievements: React.FC = () => {
                     <h4 className={styles.achievementTitle}>{achievement.title}</h4>
                     <p className={styles.organization}>{achievement.organization}</p>
                     <p className={styles.description}>{achievement.description}</p>
+                    {achievement.title === 'Winner - Buildathon- Expo' && false && (
+                      <div className={styles.achievementLogos}>
+                        <img src={leetcodeLogo} alt="LeetCode" style={{ height: 36, width: 52, objectFit: 'contain', borderRadius: 6, background: '#fff', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }} />
+                        <img src={skillrackLogo} alt="Skillrack" style={{ height: 36, width: 36, objectFit: 'contain', borderRadius: 6, background: '#fff', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }} />
+                      </div>
+                    )}
                     <div className={styles.achievementDate}>{achievement.date}</div>
                   </div>
                 </motion.div>
@@ -142,6 +158,16 @@ const Achievements: React.FC = () => {
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.02, y: -5 }}
                 >
+                  {item.platform === 'LeetCode' && (
+                    <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 8 }}>
+                      <img src={leetcodeLogo} alt="LeetCode" style={{ height: 36, width: 52, objectFit: 'contain', borderRadius: 6, background: '#fff', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }} />
+                    </div>
+                  )}
+                  {item.platform === 'SkillRack' && (
+                    <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 8 }}>
+                      <img src={skillrackLogo} alt="Skillrack" style={{ height: 36, width: 36, objectFit: 'contain', borderRadius: 6, background: '#fff', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }} />
+                    </div>
+                  )}
                   <h4 className={styles.platform}>{item.platform}</h4>
                   <p className={styles.achievement}>{item.achievement}</p>
                 </motion.a>

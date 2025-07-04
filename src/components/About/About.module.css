@@ -176,3 +176,44 @@
     font-size: 1.8rem;
   }
 }
+
+.dark .about {
+  background: rgba(17, 24, 39, 0.85);
+}
+.dark .title {
+  color: #f3f4f6;
+}
+.dark .subtitle {
+  color: #cbd5e1;
+}
+.dark .bio h3 {
+  color: #f3f4f6;
+}
+.dark .bio p {
+  color: #cbd5e1;
+}
+.dark .detailItem {
+  background: #1e293b;
+  color: #f3f4f6;
+}
+.dark .detailItem strong {
+  color: #f3f4f6;
+}
+.dark .detailItem span {
+  color: #a1a1aa;
+}
+.dark .statItem {
+  background: #1e293b;
+}
+.dark .statLabel {
+  color: #a1a1aa;
+}
+.dark .resumeSection {
+  background: #1e293b;
+}
+.dark .resumeSection h4 {
+  color: #f3f4f6;
+}
+.dark .resumeSection p {
+  color: #cbd5e1;
+}

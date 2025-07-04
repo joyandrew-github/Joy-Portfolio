@@ -4,6 +4,31 @@ import { Github, Linkedin, Mail, ArrowDown, Code, Database, Smartphone } from 'l
 import styles from './Hero.module.css';
 import profileImg from '../../assets/profile.jpg';
 
+// Animated SVG background for Hero (starfield/constellation)
+const HeroBackground = () => (
+  <svg className={styles.heroBg} width="100%" height="100%" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    {/* Twinkling stars */}
+    {[...Array(18)].map((_, i) => {
+      const cx = 80 + (i * 75) % 1360 + (i % 2) * 30;
+      const cy = 60 + (i * 33) % 500 + (i % 3) * 20;
+      const r = 1.5 + (i % 3) * 0.7;
+      const delay = i * 0.7;
+      return (
+        <circle key={i} cx={cx} cy={cy} r={r} fill="#fff" opacity="0.7">
+          <animate attributeName="opacity" values="0.7;0.2;0.7" dur="3.5s" begin={`${delay}s`} repeatCount="indefinite" />
+        </circle>
+      );
+    })}
+    {/* Constellation lines */}
+    <polyline points="120,100 300,180 500,120 700,200 900,100 1100,180 1300,120" stroke="#a78bfa" strokeWidth="1.2" opacity="0.18">
+      <animate attributeName="opacity" values="0.18;0.32;0.18" dur="7s" repeatCount="indefinite" />
+    </polyline>
+    <polyline points="200,400 400,320 600,420 800,340 1000,420 1200,320" stroke="#6366f1" strokeWidth="1.2" opacity="0.13">
+      <animate attributeName="opacity" values="0.13;0.28;0.13" dur="8s" repeatCount="indefinite" />
+    </polyline>
+  </svg>
+);
+
 const Hero: React.FC = () => {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/joyandrew-github', label: 'GitHub' },
@@ -20,6 +45,7 @@ const Hero: React.FC = () => {
   return (
     <div className="dark">
       <section id="home" className={styles.hero}>
+        <HeroBackground />
         <div className="container">
           <div className={styles.content}>
             <motion.div
@@ -165,13 +191,21 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 2.2, duration: 0.8 }}
           >
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            <motion.a
+              href="#about"
+              className={styles.scrollLink}
+              whileHover={{ scale: 1.08, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}
             >
-              <ArrowDown size={20} />
-            </motion.div>
-            <span>Scroll to explore</span>
+              <motion.div
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <ArrowDown size={20} />
+              </motion.div>
+              <span>Scroll to explore</span>
+            </motion.a>
           </motion.div>
         </div>
       </section>

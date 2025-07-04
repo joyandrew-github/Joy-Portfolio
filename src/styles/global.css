@@ -188,3 +188,8 @@ a:hover {
     padding: 0 1rem;
   }
 }
+
+.dark body {
+  background: #111827;
+  color: #f3f4f6;
+}

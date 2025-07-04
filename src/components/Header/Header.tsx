@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Download } from 'lucide-react';
+import { Menu, X, Download, Sun, Moon } from 'lucide-react';
 import styles from './Header.module.css';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    if (typeof window !== 'undefined') {
+      return (localStorage.getItem('theme') as 'light' | 'dark') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    }
+    return 'light';
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +22,16 @@ const Header: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (theme === 'dark') {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   const navItems = [
     { href: '#home', label: 'Home' },
@@ -31,6 +48,10 @@ const Header: React.FC = () => {
     link.href = '/Joyandrew S Resume_Final.pdf';
     link.download = 'Joyandrew_S_Resume.pdf';
     link.click();
+  };
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
   };
 
   return (
@@ -75,6 +96,17 @@ const Header: React.FC = () => {
           >
             <Download size={18} />
             Resume
+          </motion.button>
+
+          <motion.button
+            className="btn-secondary"
+            aria-label="Toggle theme"
+            onClick={toggleTheme}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0.5rem', borderRadius: '0.5rem' }}
+          >
+            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </motion.button>
 
           <button

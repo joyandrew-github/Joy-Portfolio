@@ -218,3 +218,53 @@
     justify-content: center;
   }
 }
+
+.dark .contact {
+  background: #111827;
+}
+.dark .title {
+  color: #f3f4f6;
+}
+.dark .subtitle {
+  color: #cbd5e1;
+}
+.dark .contactInfo {
+  background: #1e293b;
+}
+.dark .infoTitle {
+  color: #f3f4f6;
+}
+.dark .infoDescription {
+  color: #cbd5e1;
+}
+.dark .infoItem {
+  background: #1e293b;
+  color: #f3f4f6;
+}
+.dark .infoLabel {
+  color: #a1a1aa;
+}
+.dark .infoValue {
+  color: #f3f4f6;
+}
+.dark .socialSection {
+  border-top: 1px solid #374151;
+}
+.dark .socialTitle {
+  color: #f3f4f6;
+}
+.dark .socialLink {
+  background: #1e293b;
+  color: #cbd5e1;
+}
+.dark .contactForm {
+  background: #1e293b;
+}
+.dark .label {
+  color: #f3f4f6;
+}
+.dark .input,
+.dark .textarea {
+  background: #1e293b;
+  color: #f3f4f6;
+}

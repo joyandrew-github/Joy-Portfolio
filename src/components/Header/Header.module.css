@@ -79,6 +79,28 @@
   padding: 0.5rem;
 }
 
+.dark .header {
+  background: rgba(17, 24, 39, 0.85);
+}
+
+.dark .header.scrolled {
+  background: rgba(17, 24, 39, 0.98);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.dark .navLink {
+  color: #cbd5e1;
+}
+
+.dark .navLink:hover {
+  color: var(--accent);
+}
+
+.dark .menuToggle {
+  color: #f3f4f6;
+}
+
 @media (max-width: 768px) {
   .nav {
     position: fixed;
@@ -109,5 +131,10 @@
 
   .container {
     padding: 0 0.25rem;
+  }
+
+  .dark .nav {
+    background: rgba(17, 24, 39, 0.98);
+    border-top: 1px solid var(--border);
   }
 }

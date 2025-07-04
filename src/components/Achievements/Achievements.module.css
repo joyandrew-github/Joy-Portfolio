@@ -207,3 +207,37 @@
     align-self: center;
   }
 }
+
+.dark .achievements {
+  background: rgba(17, 24, 39, 0.85);
+}
+.dark .title {
+  color: #f3f4f6;
+}
+.dark .subtitle {
+  color: #cbd5e1;
+}
+.dark .achievementCard {
+  background: #1e293b;
+  color: #f3f4f6;
+}
+.dark .achievementTitle {
+  color: #f3f4f6;
+}
+.dark .organization {
+  color: #60a5fa;
+}
+.dark .description {
+  color: #cbd5e1;
+}
+.dark .achievementDate {
+  color: #a1a1aa;
+}
+
+.achievementLogos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
