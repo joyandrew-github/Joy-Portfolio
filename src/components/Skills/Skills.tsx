@@ -233,7 +233,7 @@ const Skills: React.FC = () => {
               <img src={leetcodeLogo} alt="LeetCode" style={{ height: 72, width: 100, objectFit: 'contain', borderRadius: 8, background: '#fff', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }} />
               <img src={skillrackLogo} alt="Skillrack" style={{ height: 72, width: 72, objectFit: 'contain', borderRadius: 8, background: '#fff', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }} />
             </div>
-            <p style={{ textAlign: 'center' }}>LeetCode: 150+ problems solved, Contest Rating: 1,608 | SkillRack: 950+ problems solved</p>
+            <p style={{ textAlign: 'center' }}>LeetCode: 200+ problems solved, Contest Rating: 1,608 | SkillRack: 950+ problems solved</p>
           </div>
         </motion.div>
       </div>

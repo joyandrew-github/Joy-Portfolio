@@ -111,7 +111,21 @@
   transition: all 0.3s ease;
 }
 
+/* Add dark mode style for projectLink */
+.dark .projectLink {
+  background: rgba(30, 41, 59, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  color: #f3f4f6;
+}
+
 .projectLink:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+/* Add dark mode hover for projectLink */
+.dark .projectLink:hover {
   background: var(--accent);
   color: white;
   border-color: var(--accent);
@@ -219,4 +233,9 @@
 }
 .dark .projectDescription {
   color: #cbd5e1;
+}
+
+.dark .projectLink svg {
+  color: #fff;
+  fill: #fff;
 }
