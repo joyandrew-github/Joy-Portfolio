@@ -103,29 +103,29 @@
   transition: color 0.3s;
 }
 
-.dark .header, .dark .header.scrolled {
+html.dark .header, html.dark .header.scrolled {
   background: var(--bg);
 }
 
-.dark .navLink {
+html.dark .navLink {
   color: #cbd5e1;
 }
 
-.dark .navLink:hover {
+html.dark .navLink:hover {
   color: var(--accent);
 }
 
-.dark .menuToggle {
+html.dark .menuToggle {
   color: #f3f4f6;
 }
 
-.dark .themeToggle {
+html.dark .themeToggle {
   color: #f3f4f6;
   border-color: #f3f4f6;
   background: transparent;
 }
 
-.dark .themeToggle:hover, .dark .themeToggle:focus {
+html.dark .themeToggle:hover, html.dark .themeToggle:focus {
   background: #f3f4f6;
   color: #312e81;
   border-color: #a78bfa;
@@ -163,7 +163,7 @@
     padding: 0 0.25rem;
   }
 
-  .dark .nav {
+  html.dark .nav {
     background: rgba(17, 24, 39, 0.98);
     border-top: 1px solid var(--border);
   }

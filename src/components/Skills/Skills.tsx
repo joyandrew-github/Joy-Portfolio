@@ -12,65 +12,65 @@ const Skills: React.FC = () => {
       title: 'Frontend Development',
       icon: Code,
       skills: [
-        { name: 'React.js', level: 90 },
-        { name: 'JavaScript', level: 85 },
-        { name: 'HTML/CSS', level: 95 },
-        { name: 'Three.js', level: 75 },
-        { name: 'Bootstrap', level: 80 },
-        { name: 'GSAP', level: 70 },
-        { name: 'Framer Motion', level: 80 },
+        { name: 'React.js' },
+        { name: 'JavaScript' },
+        { name: 'HTML/CSS' },
+        { name: 'Three.js' },
+        { name: 'Bootstrap' },
+        { name: 'GSAP' },
+        { name: 'Framer Motion' },
       ],
     },
     {
       title: 'Backend Development',
       icon: Server,
       skills: [
-        { name: 'Node.js', level: 85 },
-        { name: 'Express.js', level: 80 },
-        { name: 'Django', level: 80 },
-        { name: 'REST API', level: 85 },
-        { name: 'MongoDB', level: 80 },
-        { name: 'Mongoose', level: 75 },
-        { name: 'GridFS', level: 70 },
+        { name: 'Node.js' },
+        { name: 'Express.js' },
+        { name: 'Django' },
+        { name: 'REST API' },
+        { name: 'MongoDB' },
+        { name: 'Mongoose' },
+        { name: 'GridFS' },
       ],
     },
     {
       title: 'Programming Languages',
       icon: Globe,
       skills: [
-        { name: 'C++', level: 90 },
-        { name: 'C', level: 85 },
-        { name: 'Python', level: 80 },
-        { name: 'Java', level: 75 },
-        { name: 'JavaScript', level: 85 },
+        { name: 'C++' },
+        { name: 'C' },
+        { name: 'Python' },
+        { name: 'Java' },
+        { name: 'JavaScript' },
       ],
     },
     {
       title: 'Mobile Development',
       icon: Smartphone,
       skills: [
-        { name: 'React Native', level: 75 },
+        { name: 'React Native' },
       ],
     },
     {
       title: 'Database Management',
       icon: Database,
       skills: [
-        { name: 'SQL', level: 80 },
-        { name: 'MongoDB', level: 85 },
+        { name: 'SQL' },
+        { name: 'MongoDB' },
       ],
     },
     {
       title: 'Tools & Others',
       icon: Palette,
       skills: [
-        { name: 'Git/GitHub', level: 85 },
-        { name: 'VS Code', level: 90 },
-        { name: 'IntelliJ', level: 75 },
-        { name: 'Canva', level: 80 },
-        { name: 'PowerPoint', level: 85 },
-        { name: 'MATLAB', level: 70 },
-        { name: 'Google Colab', level: 75 },
+        { name: 'Git/GitHub' },
+        { name: 'VS Code' },
+        { name: 'IntelliJ' },
+        { name: 'Canva' },
+        { name: 'PowerPoint' },
+        { name: 'MATLAB' },
+        { name: 'Google Colab' },
       ],
     },
   ];
@@ -191,20 +191,6 @@ const Skills: React.FC = () => {
                         <img src={mobileLogos[skill.name]} alt={skill.name + ' logo'} style={{ height: 24, width: 24, objectFit: 'contain', marginRight: 8 }} />
                       )}
                       <span className={styles.skillName}>{skill.name}</span>
-                      <span className={styles.skillLevel}>{skill.level}%</span>
-                    </div>
-                    <div className={styles.skillBar}>
-                      <motion.div
-                        className={styles.skillProgress}
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        transition={{ 
-                          duration: 1, 
-                          delay: categoryIndex * 0.1 + skillIndex * 0.05 + 0.3,
-                          ease: "easeOut"
-                        }}
-                        viewport={{ once: true }}
-                      />
                     </div>
                   </motion.div>
                 ))}
