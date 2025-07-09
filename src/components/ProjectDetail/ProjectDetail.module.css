@@ -1,0 +1,110 @@
+/* Project Detail Styles */
+.detailWrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #23243a 60%, #3a3b5a 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.5rem 1rem 2rem 1rem;
+}
+.detailCard {
+  background: #23243a;
+  border-radius: 18px;
+  box-shadow: 0 8px 40px 0 rgba(80, 80, 200, 0.18);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 480px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.detailImage {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 16px 0 rgba(80, 80, 200, 0.10);
+}
+.detailTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: #a18aff;
+}
+.detailDesc {
+  font-size: 1.08rem;
+  margin-bottom: 1.1rem;
+  color: #e0e0ff;
+}
+.detailSection {
+  margin-bottom: 1.3rem;
+  text-align: left;
+}
+.detailSection h3 {
+  color: #a18aff;
+  font-size: 1.13rem;
+  margin-bottom: 0.5rem;
+}
+.featuresList {
+  padding-left: 1.2rem;
+  color: #e0e0ff;
+  font-size: 1.01rem;
+}
+.featuresList li {
+  margin-bottom: 0.3rem;
+  list-style: disc;
+}
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.tech {
+  background: #2d2e4a;
+  color: #a18aff;
+  font-size: 0.98rem;
+  padding: 0.32rem 0.85rem;
+  border-radius: 8px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.detailActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.2rem;
+}
+.backBtn {
+  background: none;
+  border: none;
+  color: #a18aff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+.backBtn:hover {
+  color: #fff;
+}
+.notFound {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .detailCard {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .detailImage {
+    max-height: 140px;
+  }
+}

@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink } from 'lucide-react';
 import styles from './Contact.module.css';
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    from_name: '',
+    from_email: '',
     subject: '',
     message: '',
   });
@@ -21,23 +22,34 @@ const Contact: React.FC = () => {
     }));
   };
 
+  const formRef = useRef<HTMLFormElement>(null);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    });
-    
+    try {
+      await emailjs.sendForm(
+        'service_fg8j45m', // updated service ID from dashboard
+        'template_gvz0kik',
+        formRef.current!,
+        'cus4F3ay0GV83hv0x'
+      );
+      setFormData({
+        from_name: '',
+        from_email: '',
+        subject: '',
+        message: '',
+      });
+      alert('Message sent successfully!');
+    } catch (error: any) {
+      console.error('EmailJS error:', error);
+      if (error && error.text) {
+        alert('Failed to send message: ' + error.text);
+      } else {
+        alert('Failed to send message. Please try again later.');
+      }
+    }
     setIsSubmitting(false);
-    alert('Message sent successfully!');
   };
 
   const contactInfo = [
@@ -80,7 +92,7 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className={`${styles.contact} section-padding`}>
+    <section id="contact" className={`${styles.contact} section-padding ${styles.noBottomPadding} ${styles.contactSpace}`}>
       <div className="container">
         <motion.div
           className={styles.header}
@@ -169,7 +181,7 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <form onSubmit={handleSubmit} className={styles.form}>
+            <form ref={formRef} onSubmit={handleSubmit} className={styles.form}>
               <div className={styles.formGroup}>
                 <label htmlFor="name" className={styles.label}>
                   Full Name
@@ -177,8 +189,8 @@ const Contact: React.FC = () => {
                 <input
                   type="text"
                   id="name"
-                  name="name"
-                  value={formData.name}
+                  name="from_name"
+                  value={formData.from_name}
                   onChange={handleInputChange}
                   className={styles.input}
                   required
@@ -192,13 +204,16 @@ const Contact: React.FC = () => {
                 <input
                   type="email"
                   id="email"
-                  name="email"
-                  value={formData.email}
+                  name="from_email"
+                  value={formData.from_email}
                   onChange={handleInputChange}
                   className={styles.input}
                   required
                 />
               </div>
+
+              {/* Hidden reply_to field for EmailJS reply functionality */}
+              <input type="hidden" name="from_email" value={formData.from_email} />
 
               <div className={styles.formGroup}>
                 <label htmlFor="subject" className={styles.label}>

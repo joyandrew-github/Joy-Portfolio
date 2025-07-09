@@ -102,23 +102,6 @@ function isDarkMode() {
   return false;
 }
 
-export default function Background3D({ hideInDarkAbout = false, section = '' }) {
-  // Hide animation if in dark mode and section is 'about' or 'projects'
-  if (hideInDarkAbout && (section === 'about' || section === 'projects') && isDarkMode()) {
-    return null;
-  }
-  return (
-    <div className={styles.background3D}>
-      <Canvas
-        camera={{ position: [0, 0, 20], fov: 60 }}
-        style={{ background: 'var(--bg)' }}
-      >
-        <ambientLight intensity={0.3} />
-        <pointLight position={[10, 10, 10]} intensity={0.5} />
-        <MinimalParticles />
-        <FloatingGrid />
-        <SubtleGeometry />
-      </Canvas>
-    </div>
-  );
+export default function Background3D() {
+  return null;
 }

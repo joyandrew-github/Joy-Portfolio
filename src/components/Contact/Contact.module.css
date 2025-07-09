@@ -197,6 +197,14 @@
   color: var(--text-light);
 }
 
+.noBottomPadding {
+  padding-bottom: 0 !important;
+}
+
+.contactSpace {
+  margin-bottom: 2rem;
+}
+
 @media (max-width: 768px) {
   .content {
     grid-template-columns: 1fr;

@@ -1,0 +1,237 @@
+.footer {
+  width: 100%;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  padding: 3rem 0 0 0;
+  box-shadow: 0 -2px 8px 0 rgba(0,0,0,0.03);
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.aboutSection {
+  flex: 1 1 260px;
+  min-width: 220px;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.description {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  max-width: 350px;
+}
+
+.linksSection {
+  flex: 1 1 320px;
+  min-width: 260px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.linksTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+.linksGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 2.5rem;
+  justify-content: center;
+  align-items: start;
+}
+.link {
+  display: flex;
+  align-items: center;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  transition: color 0.3s;
+  justify-content: flex-start;
+}
+.link:hover {
+  color: var(--accent);
+}
+
+.linkIcon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.connectSection {
+  flex: 1 1 220px;
+  min-width: 180px;
+  text-align: center;
+}
+.connectTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+.socialRow {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.socialCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  color: var(--text-light);
+  background: transparent;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.socialCircle:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+.backToTop {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 500;
+  border-radius: 2rem;
+  padding: 0.6rem 1.5rem;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+  border: none;
+  box-shadow: 0 2px 8px 0 rgba(67,56,202,0.08);
+}
+.backToTop:hover {
+  background: #60a5fa;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.divider {
+  border: none;
+  border-top: 1.5px solid var(--border);
+  margin: 2.5rem auto 1.5rem auto;
+  width: 85%;
+}
+
+.bottomSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.copyright {
+  color: var(--text-light);
+  font-size: 1rem;
+  text-align: center;
+}
+.credit {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .topSection {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 0 1rem;
+  }
+  .bottomSection {
+    align-items: center;
+    padding: 0 1rem 2rem 1rem;
+  }
+  .divider {
+    width: 95%;
+  }
+  .linksGrid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem 0;
+    justify-items: center;
+  }
+  .linksSection {
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+.dark .footer {
+  background: #1e293b;
+  border-top: 1px solid #374151;
+}
+.dark .logo {
+  color: #f3f4f6;
+}
+.dark .linksTitle,
+.dark .connectTitle {
+  color: #f3f4f6;
+}
+.dark .link {
+  color: #a1a1aa;
+}
+.dark .link:hover {
+  color:#312e81;
+}
+.dark .socialCircle {
+  border-color: #374151;
+  color: #a1a1aa;
+  background: transparent;
+}
+.dark .socialCircle:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.dark .backToTop {
+  background: #6366f1;
+  color: #fff;
+}
+.dark .backToTop:hover {
+  background: #a78bfa;
+}
+.dark .divider {
+  border-top: 1.5px solid #374151;
+}
+.dark .copyright,
+.dark .credit {
+  color: #a1a1aa;
+}

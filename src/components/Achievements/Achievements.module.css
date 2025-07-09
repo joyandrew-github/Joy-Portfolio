@@ -181,6 +181,21 @@
   flex-shrink: 0;
 }
 
+.goldStar {
+  color: #FFD700;
+  font-weight: bold;
+}
+
+.silverStar {
+  color: #C0C0C0;
+  font-weight: bold;
+}
+
+.bronzeStar {
+  color: #CD7F32;
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 2rem;

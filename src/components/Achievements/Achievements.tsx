@@ -4,6 +4,8 @@ import { Trophy, Award, Star, Target } from 'lucide-react';
 import styles from './Achievements.module.css';
 import leetcodeLogo from '../../assets/leetcode.jpeg';
 import skillrackLogo from '../../assets/skillrack.jpg';
+import codechefLogo from '../../assets/codechef.png';
+import hackerrankLogo from '../../assets/hackerrank.png';
 
 const Achievements: React.FC = () => {
   const achievements = [
@@ -69,6 +71,16 @@ const Achievements: React.FC = () => {
       platform: 'SkillRack',
       achievement: 'Solved 950+ problems, Rank: 23915',
       link: 'https://www.skillrack.com/faces/resume.xhtml?id=484635&key=30ab779f84cdb0655c44daaefde8f946d1f5e7cd',
+    },
+    {
+      platform: 'CodeChef',
+      achievement: 'Solved 85+ problems',
+      link: 'https://www.codechef.com/users/joyandrews', // Replace with your actual CodeChef profile link
+    },
+    {
+      platform: 'HackerRank',
+      achievement: 'Java 5★ (Gold), C++ 3★ (Silver), Python 3★ (Silver), SQL 1★ (Bronze), Hackos: 502',
+      link: 'https://www.hackerrank.com/profile/joyandrew006',
     },
   ];
 
@@ -168,8 +180,29 @@ const Achievements: React.FC = () => {
                       <img src={skillrackLogo} alt="Skillrack" style={{ height: 36, width: 36, objectFit: 'contain', borderRadius: 6, background: '#fff', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }} />
                     </div>
                   )}
+                  {item.platform === 'CodeChef' && (
+                    <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 8 }}>
+                      <img src={codechefLogo} alt="CodeChef" style={{ height: 36, width: 52, objectFit: 'contain', borderRadius: 6, background: '#fff', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }} />
+                    </div>
+                  )}
+                  {item.platform === 'HackerRank' && (
+                    <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 8 }}>
+                      <img src={hackerrankLogo} alt="HackerRank" style={{ height: 36, width: 52, objectFit: 'contain', borderRadius: 6, background: '#fff', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }} />
+                    </div>
+                  )}
                   <h4 className={styles.platform}>{item.platform}</h4>
-                  <p className={styles.achievement}>{item.achievement}</p>
+                  {item.platform === 'HackerRank' ? (
+                    <div className={styles.achievement} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 0 }}>
+                      <span>Java <span className={styles.goldStar}>5★</span> (Gold)</span>
+                      <span>C++ <span className={styles.silverStar}>3★</span> (Silver)</span>
+                      <span>Python <span className={styles.silverStar}>3★</span> (Silver)</span>
+                      <span>C <span className={styles.bronzeStar}>1★</span> (Bronze)</span>
+                      <span>SQL <span className={styles.bronzeStar}>1★</span> (Bronze)</span>
+                      <span>Hackos: 502</span>
+                    </div>
+                  ) : (
+                    <p className={styles.achievement}>{item.achievement}</p>
+                  )}
                 </motion.a>
               ))}
             </div>
