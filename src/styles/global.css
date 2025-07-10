@@ -15,6 +15,7 @@
   --border: #e2e8f0;
   --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --svg-brand-bg: #8B5CF6; /* Light theme color */
 }
 
 * {
@@ -199,4 +200,5 @@ a:hover {
   --bg: #111827;
   --bg-card: #1e293b;
   --border: #374151;
+  --svg-brand-bg: #6366f1; /* Dark theme color */
 }

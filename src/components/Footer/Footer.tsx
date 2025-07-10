@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
           <span className={styles.logo}>
             <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="2" width="28" height="28" rx="8" fill="#8B5CF6"/>
+                <rect x="2" y="2" width="28" height="28" rx="8" fill="var(--svg-brand-bg)"/>
                 <path d="M10 22L16 10L22 22" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
                 <circle cx="16" cy="19" r="1.5" fill="#fff"/>
               </svg>
