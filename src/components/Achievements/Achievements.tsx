@@ -65,7 +65,7 @@ const Achievements: React.FC = () => {
     {
       platform: 'LeetCode',
       achievement: 'Solved 200+ problems, Contest Rating: 1,608',
-      link: 'https://leetcode.com/u/user5788Ci/',
+      link: 'https://leetcode.com/u/Joyandrew/',
     },
     {
       platform: 'SkillRack',
