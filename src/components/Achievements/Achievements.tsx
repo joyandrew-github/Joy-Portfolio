@@ -8,6 +8,7 @@ import codechefLogo from '../../assets/codechef.png';
 import hackerrankLogo from '../../assets/hackerrank.png';
 
 const Achievements: React.FC = () => {
+  
   const achievements = [
     {
       title: 'Winner - Buildathon- Expo',

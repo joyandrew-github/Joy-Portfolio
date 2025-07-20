@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, ExternalLink } from 'lucide-react';
+import { Calendar, MapPin, ExternalLink, Award } from 'lucide-react';
 import styles from './Experience.module.css';
 
 const Experience: React.FC = () => {
@@ -97,6 +97,20 @@ const Experience: React.FC = () => {
                           whileTap={{ scale: 0.95 }}
                         >
                           <ExternalLink size={18} />
+                        </motion.a>
+                      )}
+                      {/* View Certificate Button */}
+                      {exp.title === 'MERN Stack Internship' && (
+                        <motion.a
+                          href="/intern-certificate-23.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.certificateButton}
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.97 }}
+                        >
+                          <Award size={20} color="#FFD600" style={{marginRight: 4}} />
+                          View Certificate
                         </motion.a>
                       )}
                     </div>

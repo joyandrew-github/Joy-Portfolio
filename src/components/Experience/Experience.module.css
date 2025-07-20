@@ -189,6 +189,28 @@
   font-weight: 500;
 }
 
+.certificateButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border-radius: 2rem;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-left: 12px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+.certificateButton:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
 @media (max-width: 768px) {
   .content {
     grid-template-columns: 1fr;
@@ -240,4 +262,14 @@
 }
 .dark .description {
   color: #cbd5e1;
+}
+.dark .certificateButton {
+  background: #1e293b;
+  color: #f3f4f6;
+  border: 1px solid #374151;
+}
+.dark .certificateButton:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
 }
