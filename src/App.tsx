@@ -11,6 +11,7 @@ import Contact from './components/Contact/Contact';
 import Background3D from './components/Background3D/Background3D';
 import ProjectDetail from './components/ProjectDetail/ProjectDetail';
 import Footer from './components/Footer/Footer';
+import Chatbot from './components/Chatbot/Chatbot';
 import './styles/global.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -60,6 +61,7 @@ function PortfolioMain() {
           <Achievements />
           <Contact />
           <Footer />
+          <Chatbot />
         </motion.main>
       </div>
     </div>
