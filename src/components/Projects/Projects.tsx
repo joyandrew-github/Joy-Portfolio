@@ -46,13 +46,13 @@ const Projects: React.FC = () => {
       featured: false,
     },
     {
-      title: 'TASK MANAGER',
-      description: 'Developed a task management application using C, allowing users to create, prioritize, and track deadlines for tasks. The app helps organize tasks efficiently with an easy-to-use interface. It also provides real-time notifications and progress tracking to boost productivity.',
-      image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['C'],
-      liveLink: '#',
-      githubLink: 'https://github.com/joyandrew-github',
-      date: '',
+      title: 'CampusLink – Centralized Student Utility Hub',
+      description: 'A full-stack web app streamlining campus services like announcements, lost & found, timetable, and hostel complaints.',
+      image: 'https://res.cloudinary.com/duwvhcha4/image/upload/v1753507942/logosece_pj0sr9.png',
+      technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST API', 'JWT Auth', 'Tailwind CSS'],
+      liveLink: 'https://campuslink-sece.vercel.app/',
+      githubLink: 'https://github.com/joyandrew-github/CampusLink_Frontend',
+      date: 'July 2025',
       featured: false,
     },
     {
@@ -97,7 +97,11 @@ const Projects: React.FC = () => {
               whileHover={{ y: -5 }}
             >
               <div className={styles.projectImage}>
-                <img src={project.image} alt={project.title} />
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className={project.title.includes('CampusLink') ? `${styles.campuslinkLogo} campuslink-logo` : ''}
+                />
                 <div className={styles.projectOverlay}>
                   <div className={styles.projectLinks}>
                     <motion.a

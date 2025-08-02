@@ -11,6 +11,14 @@ const Achievements: React.FC = () => {
   
   const achievements = [
     {
+      title: 'Winner – ZERODAY 24-Hour Startup Hackathon',
+      organization: 'Sri Eshwar College of Engineering',
+      description: 'Secured 1st Place among top finalist teams for developing CampusLink – Centralized Student Utility Hub, a full-stack web application streamlining campus services such as announcements, lost & found, timetables, and hostel complaints. Cash Prize: ₹3,000',
+      date: 'July 2025',
+      icon: Trophy,
+      type: 'hackathon',
+    },
+    {
       title: 'Winner - Buildathon- Expo',
       organization: 'Sri Eshwar College of Engineering',
       description: 'Achieved 1st place among 20+ teams in the department at the C Buildathon held at Sri Eshwar College of Engineering.',
@@ -65,8 +73,8 @@ const Achievements: React.FC = () => {
   const problemSolving = [
     {
       platform: 'LeetCode',
-      achievement: 'Solved 200+ problems, Contest Rating: 1,608',
-      link: 'https://leetcode.com/u/user5788Ci/',
+      achievement: 'Solved 300+ problems, Contest Rating: 1,508',
+      link: 'https://leetcode.com/u/Joyandrew/',
     },
     {
       platform: 'SkillRack',

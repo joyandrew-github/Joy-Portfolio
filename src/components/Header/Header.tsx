@@ -45,8 +45,8 @@ const Header: React.FC = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/Joyandrew S Resume_Final.pdf';
-    link.download = 'Joyandrew_S_Resume.pdf';
+    link.href = '/Joyandrew_FinalResume_2027.pdf';
+    link.download = 'Joyandrew_FinalResume_2027.pdf';
     link.click();
   };
 

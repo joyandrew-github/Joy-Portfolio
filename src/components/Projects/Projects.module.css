@@ -239,3 +239,10 @@
   color: #fff;
   fill: #fff;
 }
+
+.projectImage img.campuslink-logo {
+  object-fit: contain;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
